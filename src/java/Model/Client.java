@@ -1,7 +1,4 @@
-
-
-
-import java.util.List;
+package Model;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -9,17 +6,15 @@ import java.util.List;
  * and open the template in the editor.
  */
 
+
 /**
  *
  * @author Jonathan
  */
-public class Meeting {
+public class Client extends Person{
     
-    private String title;
-    private String date;
-    private String place;
-    private List<Staff> staff;
-    private List<Topics> topics;
-    
+    public Client(String firstName, String lastName, String mail, int number) {
+        super(firstName, lastName, mail, number);
+    }
     
 }
