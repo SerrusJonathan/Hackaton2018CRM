@@ -18,7 +18,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author Jonathan
  */
-@WebServlet(name = "DashboardServlet", urlPatterns = {"/DashboardServlet"})
+@WebServlet(name = "DashboardServlet", urlPatterns = {"/Dashboard"})
 public class DashboardServlet extends HttpServlet {
 
     @Override

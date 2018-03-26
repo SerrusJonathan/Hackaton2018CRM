@@ -13,9 +13,9 @@ import java.util.List;
 public class  HackatonDB
 {
 
-    private static final String URL = "";
-    private static final String UID = "";
-    private static final String PWD = "";
+    private static final String URL = "192.168.128.18";
+    private static final String UID = "in16b1125";
+    private static final String PWD = "9157";
     
     // statische variabele die een verwijzing naar onze ene instantie (singleton pattern) zal bijhouden
     private static HackatonDB instance;
@@ -56,12 +56,12 @@ public class  HackatonDB
     }
     
     public void storeNewUser(String username, String password) throws SQLException{  
-        String sql = "INSERT INTO password(playerName, password)" + " VALUES (?,?)";
-        System.out.println(sql);
+        String sql = "INSERT INTO CRM_password(mail, password)" + " VALUES (?,?)";
         PreparedStatement prep = this.connection.prepareStatement(sql);
         prep.setString(1, username);
-        prep.setString(2, password);
+        prep.setString(2, username);
         prep.executeUpdate();
+        
         
         connection.close();
     }
