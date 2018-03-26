@@ -19,6 +19,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.sql.SQLException;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpSession;
 
 /**
@@ -103,7 +104,8 @@ public class LoginServlet extends HttpServlet {
                         
                         response.setContentType("text/html");
                         PrintWriter out = response.getWriter();
-                        out.println("<p>Good job! User logged in with account: " + session.getAttribute("user") + "!</p>");
+                        RequestDispatcher rs = request.getRequestDispatcher("DashboardServlet");
+                      
                     } else {
                         response.setContentType("text/html");
                         PrintWriter out = response.getWriter();
