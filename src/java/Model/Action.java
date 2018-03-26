@@ -15,5 +15,30 @@ public class Action {
     private Person assignee;
     private String deadline;
     private String comment;
+
+    public Action(String text, Person assignee, String deadline, String comment) {
+        this.text = text;
+        this.assignee = assignee;
+        this.deadline = deadline;
+        this.comment = comment;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public Person getAssignee() {
+        return assignee;
+    }
+
+    public String getDeadline() {
+        return deadline;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+    
+    
     
 }
