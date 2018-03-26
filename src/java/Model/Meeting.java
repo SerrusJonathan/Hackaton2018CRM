@@ -22,6 +22,32 @@ public class Meeting {
     private String place;
     private List<Staff> staff;
     private List<Topics> topics;
+
+    public Meeting(String title, String date, String place) {
+        this.title = title;
+        this.date = date;
+        this.place = place;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public String getPlace() {
+        return place;
+    }
+
+    public List<Staff> getStaff() {
+        return staff;
+    }
+
+    public List<Topics> getTopics() {
+        return topics;
+    }
     
     
 }

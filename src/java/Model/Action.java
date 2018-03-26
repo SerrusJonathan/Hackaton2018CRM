@@ -15,12 +15,15 @@ public class Action {
     private Person assignee;
     private String deadline;
     private String comment;
+    private ActionStatus actionstatus;
+    
 
     public Action(String text, Person assignee, String deadline, String comment) {
         this.text = text;
         this.assignee = assignee;
         this.deadline = deadline;
         this.comment = comment;
+        this.actionstatus = ActionStatus.Open;
     }
 
     public String getText() {
