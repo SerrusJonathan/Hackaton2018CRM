@@ -55,5 +55,35 @@ public class  HackatonDB
         return instance;
     }
     
+    public void storeNewUser(String username, String password) throws SQLException{  
+        String sql = "INSERT INTO password(playerName, password)" + " VALUES (?,?)";
+        System.out.println(sql);
+        PreparedStatement prep = this.connection.prepareStatement(sql);
+        prep.setString(1, username);
+        prep.setString(2, password);
+        prep.executeUpdate();
+        
+        connection.close();
+    }
     
+    public boolean loginUser(String username, String password) throws SQLException{
+        String sql = "select * from password where playerName=?";
+        PreparedStatement prep = this.connection.prepareStatement(sql);
+        prep.setString(1, username);
+        ResultSet rs = prep.executeQuery();
+        if (rs.next()){
+            String ControlePassword = rs.getString("password");
+            if (ControlePassword.equals(password)){
+                prep.close();
+                return true;
+            } else {
+                prep.close();
+                return false;
+            }
+        } else {
+            prep.close();
+            return false;
+        }
+        
+    }
 }
