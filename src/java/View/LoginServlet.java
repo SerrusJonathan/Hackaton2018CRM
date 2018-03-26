@@ -114,33 +114,7 @@ public class LoginServlet extends HttpServlet {
                 }
                 break;
         }
-        
-        
-        
+           
     }
-        
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
     
-    /* public static String encryptSHA512(String target) {
-        try {
-            MessageDigest sh = MessageDigest.getInstance("SHA_512");
-            sh.update(target.getBytes());
-            StringBuffer sb = new StringBuffer();
-            for (byte b : sh.digest()) sb.append(Integer.toHexString(0xff & b));
-            return sb.toString();
-        } catch (NoSuchAlgorithmException e) {
-            throw new RuntimeException(e);
-        }
-    } */
-    
-    
-
 }
