@@ -54,11 +54,11 @@ public class  HackatonDB
         prep.setString(1, username);
         prep.setString(2, password);
         prep.executeUpdate();     
-        connection.close();
+        prep.close();
     }
     
-    public boolean loginUser(String     username, String password) throws SQLException{
-        String sql = "select * from password where playerName=?";
+    public boolean loginUser(String username, String password) throws SQLException{
+        String sql = "select * from CRM_Password where mail=?";
         PreparedStatement prep = this.connection.prepareStatement(sql);
         prep.setString(1, username);
         ResultSet rs = prep.executeQuery();

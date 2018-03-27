@@ -40,8 +40,13 @@ public class LoginServlet extends HttpServlet {
         switch (hiddenParam){
             case"register":
                 try {
-                    System.out.println("Ik raak hier");
                     HackatonDB.getInstance().storeNewUser(username, password);
+                    
+                    HttpSession session = request.getSession();
+                    session.setAttribute("user", username);
+                    
+                    RequestDispatcher rd = request.getRequestDispatcher("Dashboard");
+                    rd.forward(request, response);
                 } catch (SQLException e){
                     e.printStackTrace();
                 }
@@ -52,7 +57,8 @@ public class LoginServlet extends HttpServlet {
                         HttpSession session = request.getSession();
                         session.setAttribute("user", username);
                         
-                        response.sendRedirect("dashboard.jsp");
+                        RequestDispatcher rd = request.getRequestDispatcher("Dashboard");
+                        rd.forward(request, response);
                       
                     } else {
                         response.sendRedirect("invalidLogin.jsp");
