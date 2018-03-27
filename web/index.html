@@ -1,29 +1,35 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <title>Homepage</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <h1>Login</h1>
-        <form action="Login" method="post">
-            <label><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
-
-            <label><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-            
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/css.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body class="bodyconnexion">
+<div class="divConnexion">
+    <h1 class="connexionH1">Connexion</h1>
+    <form action="Login" method="post">
+        <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" id="uname" placeholder="Enter Username" name="uname" required class="unameClass">
+            <br/><br/>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" id="psw" placeholder="Enter Password" name="psw" required class="pswClass">
+            <br/><br/>
             <input type="hidden" name="loginRegister" value="login">
-            
-            <button type="submit">Login</button>
-        </form>
-        
-        <a href="register.html">Register</a>
-    </body>
+            <br/><br/>
+            <button type="submit" class="button">Login</button>
+            <br/><br/>
+            <label>
+                <input type="checkbox" checked="checked" name="remember" class="rememberMe"> Remember me
+            </label>
+            <br/><br/>
+        </div>
+        <br/><br/>
+    </form>
+    
+    <a href="register.html">Register</a>
+</div>
+</body>
 </html>

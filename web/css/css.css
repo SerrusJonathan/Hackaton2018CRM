@@ -1,0 +1,250 @@
+body
+{
+    margin-top: 5%;
+    background-color:#cccccc;
+    font-family: Cambria, Verdana, sans-serif;
+}
+
+.dashboardh1
+{
+    margin: 5%;
+    text-align: center;
+    background: #d33c37;
+    border-radius: 50px;
+    width: auto;
+}
+.pageitemp
+{
+    display: inline-block;
+    width: 42%;
+    padding: 2.4%;
+}
+
+main
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+.leftside
+{
+    background-color: rgba(240,240,240,0.8);
+    border-radius: 20px;
+
+}
+
+.rightside
+{
+    background-color: rgba(240,240,240,0.8);
+    border-radius: 20px;
+
+}
+
+.divConnexion
+{
+    width: 50%;
+    height: 70%;
+    background:linear-gradient(rgba(245, 255 ,245 , .5), rgba(245, 230, 220, 0.46)), url("../deloitte01.jpg") no-repeat center center fixed;
+    background-repeat:no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: auto;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    margin-left: 25%;
+    margin-top: 5%;
+    margin-right: 40%;
+    font-size: large;
+    border-radius: 8px;
+    border-color: black;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px black;
+}
+
+.indexdiv
+{
+
+}
+
+.buttonaddmeetingup
+{
+    background-color: #000000; /* Black */
+    border: none;
+    color: white;
+    border: 2px solid #000000;
+    margin-left: 40%;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.buttonaddmeetingup:hover
+{
+    background-color: #d33c37;
+    color:black;
+    border: 2px solid #000000;
+}
+
+.buttonaddclient
+{
+    background-color: #000000; /* Black */
+    border: none;
+    color: white;
+    border: 2px solid #000000;
+    margin-left: 40%;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.buttonaddclient:hover
+{
+    background-color: #d33c37;
+    color:black;
+    border: 2px solid #000000;
+}
+
+.flexAccordion
+{
+
+}
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: 2px black;
+    border-radius: 5px;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #d33c37;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: whitesmoke;
+    max-height: 0;
+    max-width: 100%;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+}
+
+.bodyconnexion
+{
+
+}
+
+.listclient ul li:nth-child(odd)
+{
+    background: #cccccc;
+    list-style-type: none;
+    padding: 5px;
+}
+.listclient ul li:nth-child(even)
+{
+    background: grey;
+    list-style-type: none;
+    padding: 5px;
+}
+
+.connexionH1
+{
+    font-family: Cambria, Verdana, sans-serif;
+    color:black;
+    margin: 5%;
+}
+
+.container label
+{
+    font-style: italic;
+    color : black;
+    margin-left: 5%;
+}
+
+.container .unameClass
+{
+    margin: 5%;
+    padding: 10px 28px;
+}
+
+.container .pswClass
+{
+    margin: 5%;
+    padding: 10px 28px;
+}
+
+.rememberMe
+{
+    margin-left: 20%;
+}
+
+.container .button
+{
+    background-color: #000000; /* Black */
+    border: none;
+    margin-left: 30%;
+    color: white;
+    border: 2px solid #000000;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.container .button:hover
+{
+    background-color: white;
+    color:black;
+    border: 2px solid #000000;
+}
+
+#screenCenter{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+    background-color:#d33c37;
+    position:relative;
+    font-size:20px;
+    padding: 2%;
+    border-radius:6px;
+}
+.button{
+    background-color: #000000; /* Black */
+    border: none;
+    color: white;
+    border: 2px solid #000000;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+.button:hover{
+    background-color: #d33c37;
+    color:black;
+    border: 2px solid #000000;
+}
