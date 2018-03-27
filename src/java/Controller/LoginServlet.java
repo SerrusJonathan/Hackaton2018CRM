@@ -28,6 +28,10 @@ import javax.servlet.http.HttpSession;
  */
 @WebServlet(name = "LoginServlet", urlPatterns = {"/Login"})
 public class LoginServlet extends HttpServlet {
+    
+    public void doGet(HttpServletRequest req, HttpServletResponse res) throws  ServletException, IOException {
+        doPost(req, res);
+    }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -45,8 +49,8 @@ public class LoginServlet extends HttpServlet {
                     HttpSession session = request.getSession();
                     session.setAttribute("user", username);
                     
-                    RequestDispatcher rd = request.getRequestDispatcher("Dashboard");
-                    rd.forward(request, response);
+                    response.sendRedirect("Dashboard.jsp");
+                    return;
                 } catch (SQLException e){
                     e.printStackTrace();
                 }
@@ -57,11 +61,12 @@ public class LoginServlet extends HttpServlet {
                         HttpSession session = request.getSession();
                         session.setAttribute("user", username);
                         
-                        RequestDispatcher rd = request.getRequestDispatcher("Dashboard");
-                        rd.forward(request, response);
+                        response.sendRedirect("Dashboard.jsp");
+                        return;
                       
                     } else {
-                        response.sendRedirect("invalidLogin.jsp");
+                        response.sendRedirect("InvalidLogin.jsp");
+                        return;
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
