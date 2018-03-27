@@ -8,7 +8,10 @@ package Controller;
 import Model.*;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -32,7 +35,11 @@ public class DashboardServlet extends HttpServlet {
         meetings = HackatonDB.getInstance().getAllMeetings();
         
         ArrayList<Client> clients = new ArrayList<>();
-        clients = HackatonDB.getInstance().getAllClients();
+        try {
+            clients = HackatonDB.getInstance().getAllClients();
+        } catch (SQLException ex) {
+            Logger.getLogger(DashboardServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
         request.setAttribute("meetings", meetings);
         request.setAttribute("clients", clients);

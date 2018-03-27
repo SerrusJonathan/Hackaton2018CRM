@@ -11,7 +11,7 @@ package Model;
  *
  * @author Jonathan
  */
-class Topics {
+public class Topics {
     
     private String title;
     private String content;
@@ -19,6 +19,10 @@ class Topics {
     public Topics(String title, String content) {
         this.title = title;
         this.content = content;
+    }
+
+    public Topics() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public String getTitle() {

@@ -14,7 +14,7 @@
 <div class="leftside pageitemp">
         <div class="indexdiv">
 
-        <a class="buttonaddmeetingup" href="addMeeting.html">Add meeting</a>
+        <a class="buttonaddmeetingup" href="addMeeting.jsp">Add meeting</a>
         
         <c:forEach items="${meetings}" var="item">
             <div class="flexAccordion">
@@ -46,31 +46,6 @@
                 </div>
         </c:forEach>
 
-        <div class="flexAccordion">
-        <button class="accordion">Meeting 1</button>
-        <div class="panel">
-            <p>Title</p>
-            <p>Date</p>
-            <p>Place</p>
-            <div id="listTopics1">
-                <p>placeholder</p>
-            </div>
-            <div id="listTopics1">
-                <p>Topics</p>
-                <p style="font-style: italic" name="title">Title</p>
-                <p style="font-style: italic" name="content">Content</p>
-            </div>
-            <div id="listActions1">
-                <p>Actions</p>
-                <p style="font-style: italic">Text</p>
-                <p style="font-style: italic">Assignee</p>
-                <p style="font-style: italic">Deadline</p>
-                <p style="font-style: italic">Comment</p>
-
-            </div>
-        </div>
-
-
             <script>
                 var acc = document.getElementsByClassName("accordion");
                 var i;
@@ -89,7 +64,7 @@
             </script>
 
             </div>
-            <a class="buttonaddmeetingup" href="addMeeting.html">Add meeting</a>
+            <a class="buttonaddmeetingup" href="addMeeting.jsp">Add meeting</a>
         </div>
     </div>
 

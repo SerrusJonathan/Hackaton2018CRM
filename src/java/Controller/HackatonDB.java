@@ -137,4 +137,9 @@ public class  HackatonDB
     public void storeMeeting(Meeting meeting){
         
     }
+    
+    public ArrayList<Staff> getAllStaff(){
+        ArrayList<Staff> staff = new ArrayList<>();
+        return staff;
+    }
 }

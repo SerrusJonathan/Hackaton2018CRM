@@ -15,9 +15,14 @@ public class Person {
     
     private String firstName;
     private String lastName;
-    private String mail;
-    private int number;
-    private String comment;
+    public String mail;
+    public int number;
+    public String comment;
+
+    public Person(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
 
     public Person(String firstName, String lastName, String mail, int number) {
         this.firstName = firstName;
@@ -44,6 +49,14 @@ public class Person {
 
     public String getComment() {
         return comment;
+    }
+    
+    public void setNumber(int number){
+        this.number = number;
+    }
+    
+    public void setEmail(String mail){
+        this.mail = mail;
     }
     
     

@@ -20,15 +20,18 @@ public class Meeting {
     private String title;
     private String date;
     private String place;
-    private List<Staff> staff;
-    private List<Topics> topics;
+    private Client client;
+    private Staff staff;
+    private Topics topics;
     private Action action;
 
-    public Meeting(String title, String date, String place, Action action) {
+    public Meeting(String title, String date, String place, Action action, Client client, Topics topics) {
         this.title = title;
         this.date = date;
         this.place = place;
         this.action = action;
+        this.client = client;
+        this.topics = topics;
     }
 
     public String getTitle() {
@@ -42,17 +45,29 @@ public class Meeting {
     public String getPlace() {
         return place;
     }
+    
+    public Client getClient(){
+        return client;
+    }
 
-    public List<Staff> getStaff() {
+    public Staff getStaff() {
         return staff;
     }
 
-    public List<Topics> getTopics() {
+    public Topics getTopics() {
         return topics;
     }
 
     public Action getAction() {
         return action;
+    }
+
+    public void setStaff(Staff staff) {
+        this.staff = staff;
+    }
+
+    public void setTopics(Topics topic) {
+        this.topics = topics;
     }
     
     

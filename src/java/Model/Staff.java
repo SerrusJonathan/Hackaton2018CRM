@@ -13,8 +13,8 @@ package Model;
  */
 public class Staff extends Person{
     
-    public Staff(String firstName, String lastName, String mail, int number) {
-        super(firstName, lastName, mail, number);
+    public Staff(String firstName, String lastName) {
+        super(firstName, lastName);
     }
     
     
