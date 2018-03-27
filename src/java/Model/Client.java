@@ -17,13 +17,15 @@ public class Client extends Person{
     public Client(String firstName, String lastName) {
         super(firstName, lastName);
     }
-
+    
+    public Client(String firstName, String lastName,  String mail, int number) {
+        super(firstName, lastName,mail, number);
+    }
+    
     public Client(String firstName, String lastName, String mail, int number, Key key) {
         super(firstName, lastName, mail, number);
         this.key = key;
-    }
-
-    
+    }    
 
     public Key getKey() {
         return key;
