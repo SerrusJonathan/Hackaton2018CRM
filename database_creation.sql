@@ -21,7 +21,7 @@ CREATE TABLE CRM_Client(
 	lastname VARCHAR(50) NOT NULL,
 	mail VARCHAR(50),
 	number INT,
-	key int
+	client_key int
 );
 
 CREATE TABLE CRM_Staff(
