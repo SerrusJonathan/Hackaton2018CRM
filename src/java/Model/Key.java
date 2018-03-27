@@ -16,7 +16,7 @@ public class Key {
     private String title;
     private String content;
 
-    public Key(String title) {
+    public Key(String title, String content) {
         this.title = title;
     }
 
@@ -31,7 +31,5 @@ public class Key {
     public void setContent(String content) {
         this.content = content;
     }
-    
-    
     
 }
