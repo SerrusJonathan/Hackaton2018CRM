@@ -1,6 +1,9 @@
 package Controller;
 
 import Model.*;
+import Model.PasswordHashing.PasswordHashing;
+import static Model.PasswordHashing.PasswordHashing.getSaltedHash;
+import static Model.PasswordHashing.PasswordHashing.check;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.sql.Connection;
@@ -41,23 +44,24 @@ public class HackatonDB {
         return instance;
     }
 
-    public void storeNewUser(String username, String password) throws SQLException {
+    public void storeNewUser(String username, String password) throws SQLException, Exception {
         String sql = "INSERT INTO CRM_Password(mail, password)" + " VALUES (?,?)";
         PreparedStatement prep = this.connection.prepareStatement(sql);
         prep.setString(1, username);
-        prep.setString(2, password);
+        String passwordHashed = getSaltedHash(password);
+        prep.setString(2, passwordHashed);
         prep.executeUpdate();
         prep.close();
     }
 
-    public boolean loginUser(String username, String password) throws SQLException {
+    public boolean loginUser(String username, String password) throws SQLException, Exception {
         String sql = "select * from CRM_Password where mail=?";
         PreparedStatement prep = this.connection.prepareStatement(sql);
         prep.setString(1, username);
         ResultSet rs = prep.executeQuery();
         if (rs.next()) {
             String ControlePassword = rs.getString("password");
-            if (ControlePassword.equals(password)) {
+            if (check(password, ControlePassword)) {
                 prep.close();
                 return true;
             } else {

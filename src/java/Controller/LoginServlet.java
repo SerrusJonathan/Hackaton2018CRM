@@ -51,7 +51,7 @@ public class LoginServlet extends HttpServlet {
                     
                     response.sendRedirect("Dashboard.jsp");
                     return;
-                } catch (SQLException e){
+                } catch (Exception e){
                     e.printStackTrace();
                 }
                 break;
@@ -65,7 +65,7 @@ public class LoginServlet extends HttpServlet {
                         return;
                       
                     } else {
-                        response.sendRedirect("invalidLogin.html");
+                        response.sendRedirect("invalidLogin.jsp");
                         return;
                     }
                 } catch (Exception e) {
