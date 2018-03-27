@@ -1,0 +1,96 @@
+.addNewClient{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    color:white;
+    margin-top: 5%;
+    height:auto;
+    font-family: Arial,Georgia, Verdana, sans-serif;
+    background:linear-gradient(rgba(97, 98 ,116 , .5), rgba(245, 0, 0, 0.22)), url("background1.jpg") no-repeat center center fixed;
+    background-repeat:no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#screenCenter{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height:120%;
+}
+.button{
+    background-color: #000000;
+    border: none;
+    color: white;
+    border: 2px solid #000000;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+.button:hover{
+    background-color: #d33c3700;
+    color:black;
+    border: 2px solid #000000;
+}
+
+input[type=text]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 3px 0;
+    box-sizing: border-box;
+    border-radius:2px;
+}
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 50%;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #d33c37;
+}
+.selector{
+    font-size:14px;
+    width:100%;
+    max-height:25%;
+    padding:2px;
+    border-radius:3px;
+}
+.choice{
+    border-radius:3px;
+    width:100%;
+    padding:10px;
+}
+.panel {
+    padding: 0 18px;
+    background-color: whitesmoke;
+    max-height: 0;
+    max-width: 47.5%;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+}
+
+.comment{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 3px 0;
+    box-sizing: border-box;
+    border-radius:2px;
+}
+::-moz-selection {
+    color: gold;
+    background: red;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="cssNewClient.css">
+    <title>Add Meeting</title>
+</head>
+<body class="addNewClient">
+<div class="background">
+    <div id="screenCenter">
+        <div class = "layer">
+            <h1>Add Meeting</h1>
+                <label for="title">Title</label><br/>
+                <input type="text" id="title" name="title" placeholder="Title" required>
+                <br/><br/>
+                <label for="meetingDate">Date</label><br/>
+                <input type="date" id="meetingDate" name="date" placeholder="Last name..." required>
+                <br/><br/>
+                <label for="place">Name place or phone call</label><br/>
+                <input type="text" id="place" name="place" placeholder="Email adress..." required>
+                <br/><br/>
+                <label>Select a client</label><br/>
+                <form action="/action_page.php">
+                    <select class="selector" name="cars" size="4" multiple>
+                        <option class="choice" value="volvo">Volvo</option>
+                        <option class="choice" value="saab">Saab</option>
+                        <option class="choice" value="fiat">Fiat</option>
+                        <option class="choice" value="audi">Audi</option>
+                    </select>
+                    <br><br>
+                </form>
+                <label>Select a staff member</label><br/>
+                <form action="/action_page.php">
+                    <select class="selector" name="" size="4" multiple>
+                        <option class="choice" value="volvo">Volvo</option>
+                        <option class="choice" value="saab">Saab</option>
+                        <option class="choice" value="fiat">Fiat</option>
+                        <option class="choice" value="audi">Audi</option>
+                    </select>
+                    <br><br>
+                </form>
+                <br/><br/>
+                <h3>Discussion Topics</h3>
+                <label for="title">Title</label><br/>
+                <input type="text" id="topicTitle" name="title" placeholder="Title" required>
+                <label for="title">Content</label><br/>
+                <textarea class="comment" name="comments" placeholder="Add a comment !" cols="40" rows="5" ></textarea>
+                <br/>
+                <h3>Actions</h3>
+                <label for="title">Text</label><br/>
+                <textarea class="comment" name="textAction" placeholder="Add a text !" cols="40" rows="5" ></textarea>
+                <label>Select a Client</label><br/>
+                <form action="/action_page.php">
+                    <select class="selector" name="" size="4" multiple>
+                        <option class="choice" value="volvo">Volvo</option>
+                        <option class="choice" value="saab">Saab</option>
+                        <option class="choice" value="fiat">Fiat</option>
+                        <option class="choice" value="audi">Audi</option>
+                    </select>
+                    <br><br>
+                </form>
+                <label for="title">Title</label><br/>
+                <input type="date" name="date" placeholder="Deadline" required>
+                <label>Comment</label><br/>
+                <textarea class="comment" name="textAction" placeholder="Add a comment !" cols="40" rows="5" ></textarea>
+                <input class="button" type="submit">
+        </div>
+    </div>
+</div>
+</form>
+</body>
+</html>

@@ -46,7 +46,7 @@ main
     height: 70%;
     background:linear-gradient(rgba(245, 255 ,245 , .5), rgba(245, 230, 220, 0.46)), url("../deloitte01.jpg") no-repeat center center fixed;
     background-repeat:no-repeat;
-    background-position: right top;
+    background-position: center;
     background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
