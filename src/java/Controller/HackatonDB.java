@@ -103,8 +103,35 @@ public class  HackatonDB
         return clients;
     }
     
-    public void storeClient(Client client){
-        
+    public void storeClient(Client client) throws SQLException{
+        String sql = "INSERT INTO CRM_Client(firstname, lastname, mail, number, client_key) VALUES(?, ?, ?, ?, ?)";
+        connection.setAutoCommit(false);
+        try(PreparedStatement req = connection.prepareStatement(sql)){
+            req.setString(1, client.getFirstName());
+            req.setString(2, client.getLastName());
+            req.setString(3, client.getMail());
+            req.setInt(4, client.getNumber());
+            req.setInt(5, storeClientKey(client.getKey()));
+        }
+        connection.commit();
+        connection.setAutoCommit(true);
+    }
+    
+    private int storeClientKey(Key key) throws SQLException{
+        String sql = "INSERT INTO CRM_Key(title, content) VALUES(?, ?)";
+        try(PreparedStatement req = connection.prepareStatement(sql)){
+            req.setString(1, key.getTitle());
+            req.setString(2, key.getContent());
+            return getLastKeyInserted();
+        }
+    }
+    
+    private int getLastKeyInserted() throws SQLException{
+        String sql = "SELECT MAX(CRM_Key_id) AS id FROM CRM_Key";
+        try(PreparedStatement req = connection.prepareCall(sql)){
+            ResultSet rs = req.executeQuery();
+            return rs.getInt("id");
+        }
     }
     
     public void storeMeeting(Meeting meeting){
