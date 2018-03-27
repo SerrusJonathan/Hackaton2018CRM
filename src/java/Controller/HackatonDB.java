@@ -13,7 +13,7 @@ import java.util.List;
 public class  HackatonDB
 {
 
-    private static final String URL = "sql2.freemysqlhosting.net:3306";
+    private static final String URL = "jdbc:sqlite:sql2.freemysqlhosting.net:3306/sql2228988";
     private static final String UID = "sql2228988";
     private static final String PWD = "eD1!qD3*";
     
@@ -25,17 +25,17 @@ public class  HackatonDB
     {
         try
         {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("org.sqlite.JDBC");
             
             connection = DriverManager.getConnection(URL, UID, PWD);
         }
         catch (ClassNotFoundException ex)
         {
-            ex.printStackTrace();
+            throw new RuntimeException(ex);
         }
         catch (SQLException ex)
         {
-            ex.printStackTrace();
+            throw new RuntimeException(ex);
         }
     }
 
@@ -49,7 +49,7 @@ public class  HackatonDB
     }
     
     public void storeNewUser(String username, String password) throws SQLException{  
-        String sql = "INSERT INTO CRM_Password(mail, password)" + " VALUES (?,?)";
+        String sql = "INSERT INTO CRM_Password(mail, password)" + " VALUES (?,?)";        
         PreparedStatement prep = this.connection.prepareStatement(sql);
         prep.setString(1, username);
         prep.setString(2, password);
@@ -57,7 +57,7 @@ public class  HackatonDB
         connection.close();
     }
     
-    public boolean loginUser(String username, String password) throws SQLException{
+    public boolean loginUser(String     username, String password) throws SQLException{
         String sql = "select * from password where playerName=?";
         PreparedStatement prep = this.connection.prepareStatement(sql);
         prep.setString(1, username);
