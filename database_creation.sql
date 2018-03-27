@@ -21,7 +21,7 @@ CREATE TABLE CRM_Client(
 	lastname VARCHAR(50) NOT NULL,
 	mail VARCHAR(50),
 	number INT,
-	key int FOREIGN KEY references CRM_Key.CRM_Key_id
+	key int
 );
 
 CREATE TABLE CRM_Staff(
@@ -42,14 +42,14 @@ CREATE TABLE CRM_Meeting(
 
 CREATE TABLE CRM_Meeting_Staffs(
 	CRM_Meeting_staff_id int AUTO_INCREMENT PRIMARY KEY,
-	meeting int FOREIGN KEY REFERENCES CRM_Meeting(CRM_Meeting_id),
-	staff int FOREIGN KEY REFERENCES CRM_Staff(CRM_Staff_id)
+	meeting int,
+	staff int
 );
 
 CREATE TABLE CRM_Meeting_Topics(
 	CRM_Meeting_staff_id AUTO_INCREMENT PRIMARY KEY,
-	meeting int REFERENCES(CRM_Meeting.CRM_Meeting_id),
-	topic int REFERENCES(CRM_Topic.CRM_topic_id)
+	meeting int,
+	topic int
 );
 
 CREATE TABLE CRM_Action(
@@ -57,5 +57,5 @@ CREATE TABLE CRM_Action(
 	text TEXT,
 	deadline DATETIME,
 	comment TEXT,
-	staff int FOREIGN KEY REFERENCES CRM_Staff(CRM_Staff_id)
+	staff int
 );
