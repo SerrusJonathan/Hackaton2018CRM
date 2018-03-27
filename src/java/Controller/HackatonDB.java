@@ -1,5 +1,6 @@
 package Controller;
 
+import Model.*;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.sql.Connection;
@@ -74,7 +75,24 @@ public class  HackatonDB
         } else {
             prep.close();
             return false;
-        }
+        } 
+    }
+    
+    public ArrayList<Meeting> getAllMeetings(){
+        ArrayList<Meeting> meetings = new ArrayList<>();
+        return meetings;
+    }
+    
+    public ArrayList<Client> getAllClients(){
+        ArrayList<Client> clients = new ArrayList<>();
+        return clients;
+    }
+    
+    public void storeClient(Client client){
+        
+    }
+    
+    public void storeMeeting(Meeting meeting){
         
     }
 }
