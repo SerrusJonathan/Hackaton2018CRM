@@ -41,7 +41,21 @@ public class Action {
     public String getComment() {
         return comment;
     }
+
+    public ActionStatus getActionstatus() {
+        return actionstatus;
+    }
     
+    public void setActionStatusClosed(){
+        this.actionstatus = ActionStatus.Closed;
+    }
     
+    public void setActionStatusPending(){
+        this.actionstatus = ActionStatus.Pending;
+    }
+    
+    public void setActionStatusCancelled(){
+        this.actionstatus = ActionStatus.Cancelled;
+    }
     
 }

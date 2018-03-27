@@ -22,11 +22,13 @@ public class Meeting {
     private String place;
     private List<Staff> staff;
     private List<Topics> topics;
+    private Action action;
 
-    public Meeting(String title, String date, String place) {
+    public Meeting(String title, String date, String place, Action action) {
         this.title = title;
         this.date = date;
         this.place = place;
+        this.action = action;
     }
 
     public String getTitle() {
@@ -48,5 +50,11 @@ public class Meeting {
     public List<Topics> getTopics() {
         return topics;
     }
+
+    public Action getAction() {
+        return action;
+    }
+    
+    
     
 }

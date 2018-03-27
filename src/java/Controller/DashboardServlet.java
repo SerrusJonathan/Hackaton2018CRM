@@ -5,8 +5,11 @@
  */
 package Controller;
 
+import Model.*;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,6 +24,23 @@ import javax.servlet.http.HttpSession;
 @WebServlet(name = "DashboardServlet", urlPatterns = {"/Dashboard"})
 public class DashboardServlet extends HttpServlet {
 
+    
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        ArrayList<Meeting> meetings = new ArrayList<>();
+        meetings = HackatonDB.getInstance().getAllMeetings();
+        
+        ArrayList<Client> clients = new ArrayList<>();
+        clients = HackatonDB.getInstance().getAllClients();
+        
+        request.setAttribute("meetings", meetings);
+        request.setAttribute("clients", clients);
+        
+        RequestDispatcher dis = getServletContext().getRequestDispatcher("Dashboard.jsp");
+          if(dis != null)
+          dis.forward(request,response);
+    }
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
