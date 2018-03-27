@@ -8,6 +8,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -80,11 +81,25 @@ public class  HackatonDB
     
     public ArrayList<Meeting> getAllMeetings(){
         ArrayList<Meeting> meetings = new ArrayList<>();
+        String sql = "select * FROM CRM_Meetings";
         return meetings;
     }
     
-    public ArrayList<Client> getAllClients(){
+    public ArrayList<Client> getAllClients() throws SQLException{
         ArrayList<Client> clients = new ArrayList<>();
+        String sql = "SELECT *  FROM CRM_Client c JOIN CRM_Key k ON c.client_key = k.CRM_Key_id";
+        try(PreparedStatement req = connection.prepareStatement(sql)){
+            ResultSet rs = req.executeQuery();
+            while(rs.next()){
+                clients.add(new Client(
+                        rs.getString("firstname"),
+                        rs.getString("lastname"),
+                        rs.getString("mail"),
+                        rs.getInt("number"),
+                        new Key(rs.getString("title"),rs.getString("content"))
+                ));
+            }
+        }
         return clients;
     }
     
