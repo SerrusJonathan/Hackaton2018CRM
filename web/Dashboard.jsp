@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css.css" />
+    <link rel="stylesheet" href="css/css.css" />
     <title>Dashboard</title>
 </head>
 <body>
@@ -13,7 +13,7 @@
 <div class="leftside pageitemp">
         <div class="indexdiv">
 
-        <a class="buttonaddmeetingup" href="Client.html">Add meeting</a>
+        <a class="buttonaddmeetingup" href="newClient.html">Add meeting</a>
 
         <div class="flexAccordion">
         <button class="accordion">Meeting 1</button>
@@ -56,12 +56,12 @@
             </script>
 
             </div>
-            <a class="buttonaddmeetingup" href="Client.html">Add meeting</a>
+            <a class="buttonaddmeetingup" href="newClient.html">Add meeting</a>
         </div>
     </div>
 
     <div class="rightside pageitemp">
-        <a class="buttonaddclient" href="Client.html">Add client</a>
+        <a class="buttonaddclient" href="newClient.html">Add client</a>
         <div class="listclient">
             <ul>
                 <li>Client1</li>
@@ -70,7 +70,7 @@
                 <li>Client4</li>
             </ul>
         </div>
-        <a class="buttonaddclient" href="Client.html">Add client</a>
+        <a class="buttonaddclient" href="newClient.html">Add client</a>
     </div>
 </main>
 </body>
