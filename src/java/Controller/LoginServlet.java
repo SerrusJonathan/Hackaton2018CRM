@@ -40,6 +40,7 @@ public class LoginServlet extends HttpServlet {
         switch (hiddenParam){
             case"register":
                 try {
+                    System.out.println("Ik raak hier");
                     HackatonDB.getInstance().storeNewUser(username, password);
                 } catch (SQLException e){
                     e.printStackTrace();

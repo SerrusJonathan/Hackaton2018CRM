@@ -13,7 +13,7 @@ import java.util.List;
 public class  HackatonDB
 {
 
-    private static final String URL = "jdbc:sqlite:sql2.freemysqlhosting.net:3306/sql2228988";
+    private static final String URL = "jdbc:mysql://sql2.freemysqlhosting.net:3306/sql2228988";
     private static final String UID = "sql2228988";
     private static final String PWD = "eD1!qD3*";
     
@@ -25,13 +25,13 @@ public class  HackatonDB
     {
         try
         {
-            Class.forName("org.sqlite.JDBC");
-            
+
+            Class.forName("com.mysql.jdbc.Driver");
             connection = DriverManager.getConnection(URL, UID, PWD);
         }
         catch (ClassNotFoundException ex)
         {
-            throw new RuntimeException(ex);
+            ex.printStackTrace();
         }
         catch (SQLException ex)
         {
