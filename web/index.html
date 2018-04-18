@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/css.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
-<body class="bodyconnexion">
-<div class="divConnexion">
-    <h1 class="connexionH1">Connexion</h1>
-    <form action="Login" method="post">
-        <div class="container">
-            <label for="uname"><b>Username</b></label>
-            <input type="text" id="uname" placeholder="Enter Username" name="uname" required class="unameClass">
-            <br/><br/>
-            <label for="psw"><b>Password</b></label>
-            <input type="password" id="psw" placeholder="Enter Password" name="psw" required class="pswClass">
-            <br/><br/>
-            <input type="hidden" name="loginRegister" value="login">
-            <br/><br/>
-            <button type="submit" class="button">Login</button>
-            <br/><br/>
-            <label>
-                <input type="checkbox" checked="checked" name="remember" class="rememberMe"> Remember me
-            </label>
-            <br/><br/>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/cssNewClient.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+    </head>
+    <body>
+        <div class="icon">
+            <h1 class="dashboardh1">Sign in</h1>
         </div>
-        <br/><br/>
-    </form>
-    
-    <a href="register.html">Register</a>
-</div>
+        <main class="addNewClient">
+            <div class="background">
+                <div id="screenCenter">
+                    <h1>Sign in</h1>
+                    <form action="Login" method="post">
+                        <label for="uname"><b>Username</b></label>
+                        <input type="text" id="uname" placeholder="Enter Username" name="uname" required class="unameClass">
+                        <br/><br/>
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" id="psw" placeholder="Enter Password" name="psw" required class="pswClass">
+                        <br/><br/>
+                        <input type="hidden" name="loginRegister" value="login">
+                        <br/><br/>
+                        <button type="submit" class="button">Login</button>
+                        <br/><br/>
+                        <label>
+                            <input type="checkbox" checked="checked" name="remember" class="rememberMe"> Remember me
+                        </label>
+                        <br/><br/>
+                    </form>
+                    <a href="register.html">Register</a>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
