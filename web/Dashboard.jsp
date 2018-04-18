@@ -18,10 +18,7 @@
                 <li class="nav" style="float:right"><a href="#about">About</a></li>    
                 <li class="nav" style="float:right"><a href="register.html">Register</a></li>
             </ul>
-        </div>
-
-
-        
+        </div>        
 
         <main>
             <div class="leftside pageitemp">
