@@ -51,7 +51,6 @@
                         </select>
                         <br><br>
                         </form>
-                        <br/><br/>
                         <h3>Discussion Topics</h3>
                         <label for="title">Title</label><br/>
                         <input type="text" id="topicTitle" name="topicTitle" placeholder="Title" required>
