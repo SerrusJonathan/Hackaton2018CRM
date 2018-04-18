@@ -1,36 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/cssNewClient.css">
-    <title>New Client</title>
-</head>
-<body class="addNewClient">
-<div class="background">
-    <div id="screenCenter">
-        <div class = "layer">
-            <h1>New Client</h1>
-            <form action="index.html" method="get" enctype="application/x-www-form-urlencoded">
-                <label for="fname">First Name</label><br/>
-                <input type="text" id="fname" name="firstname" placeholder="Name..." required>
-                <br/><br/>
-                <label for="lname">Last name</label><br/>
-                <input type="text" id="lname" name="lastname" placeholder="Last name..." required>
-                <br/><br/>
-                <label for="emailadress">Email adress</label><br/>
-                <input type="text" id="emailadress" name="eadress" placeholder="Email adress..." required>
-                <br/><br/>
-                <label for="telephonenumber">Telephone number</label><br/>
-                <input type="text" id="telephonenumber" name="phone" placeholder="Phone number..." required>
-                <br/><br/>
-                <label >Comment</label><br/>
-                <textarea class="comment" name="comments" placeholder="Add a comment !" cols="40" rows="5" ></textarea>
-                <br/><br/>
-                <input class="button" type="submit" name ="submit" value="Submit">
-            </form>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/cssNewClient.css">
+        <title>New Client</title>
+    </head>
+
+    <body>
+        <div class="icon">
+            <h1 class="dashboardh1">Add a new client</h1>
         </div>
-    </div>
-</div>
-</form>
-</body>
+        <div class="nav">
+            <ul class="nav">
+                <li class="nav"><a href="Dashboard.jsp">Home</a></li>
+                <li class="nav"><a class="active" href="addClient.html">Add a new client</a></li>
+                <li class="nav"><a href="addMeeting.jsp">Add a new meeting</a></li>
+                <li class="nav" style="float:right"><a href="#about">About</a></li>    
+                <li class="nav" style="float:right"><a href="register.html">Register</a></li>
+            </ul>
+        </div>
+        <main class="addNewClient">
+            <div class="background">
+                <div id="screenCenter">
+                    <div class = "layer">
+                        <h1>New Client</h1>
+                        <form action="index.html" method="get" enctype="application/x-www-form-urlencoded">
+                            <label for="fname">First Name</label><br/>
+                            <input type="text" id="fname" name="firstname" placeholder="Name..." required>
+                            <br/><br/>
+                            <label for="lname">Last name</label><br/>
+                            <input type="text" id="lname" name="lastname" placeholder="Last name..." required>
+                            <br/><br/>
+                            <label for="emailadress">Email adress</label><br/>
+                            <input type="text" id="emailadress" name="eadress" placeholder="Email adress..." required>
+                            <br/><br/>
+                            <label for="telephonenumber">Telephone number</label><br/>
+                            <input type="text" id="telephonenumber" name="phone" placeholder="Phone number..." required>
+                            <br/><br/>
+                            <label >Comment</label><br/>
+                            <textarea class="comment" name="comments" placeholder="Add a comment !" cols="40" rows="5" ></textarea>
+                            <br/><br/>
+                            <input class="button" type="submit" name ="submit" value="Submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </body>
 </html>
