@@ -2,11 +2,19 @@
     display:flex;
     flex-direction: column;
     align-items: center;
-    color:white;
-    margin-top: 5%;
+    color : black;
+    margin-top: 0%;
     height:auto;
     font-family: Arial,Georgia, Verdana, sans-serif;
-    background:linear-gradient(rgba(97, 98 ,116 , .5), rgba(245, 0, 0, 0.22)), url("background1.jpg") no-repeat center center fixed;
+}
+
+body{
+    font-family: Arial,Georgia, Verdana, sans-serif;
+    margin-top: -2%;
+    margin-left: 0%;
+    margin-right: 0%;
+    /*background:linear-gradient(rgba(97, 98 ,116 , .5), rgba(245, 0, 0, 0.22)), url("background1.jpg") no-repeat center center fixed;*/
+    background-color: whitesmoke;
     background-repeat:no-repeat;
     background-position: right top;
     background-attachment: fixed;
@@ -15,11 +23,19 @@
     -o-background-size: cover;
     background-size: cover;
 }
+
+.dashboardh1
+{
+    text-align: center;
+    color: whitesmoke;
+    padding-top: 6%;
+}
+
 #screenCenter{
     display:flex;
     flex-direction: column;
     align-items: center;
-    height:120%;
+    height: 120%;
 }
 .button{
     background-color: #000000;
@@ -47,6 +63,23 @@ input[type=text]{
     box-sizing: border-box;
     border-radius:2px;
 }
+
+input[type=date]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 3px 0;
+    box-sizing: border-box;
+    border-radius:2px;
+}
+
+input[type=password]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 3px 0;
+    box-sizing: border-box;
+    border-radius:2px;
+}
+
 .accordion {
     background-color: #eee;
     color: #444;
@@ -90,7 +123,58 @@ input[type=text]{
     box-sizing: border-box;
     border-radius:2px;
 }
+
+.icon{
+    margin-bottom: 0px;
+    height : 200px;
+    width: auto;
+    background-color: #333;
+    background-image: url("../deloitteCRMicon.png");
+    background-repeat: no-repeat;
+}
+
+
 ::-moz-selection {
     color: gold;
     background: red;
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0px;
+    height: 50px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.nav li {
+    float: left;
+    height: 50px;
+    padding: 0px;
+    font-size: 20px;    
+    border-right:1px solid #bbb;
+}
+
+.nav li:last-child {
+    border-right: none;
+    height: 50px;
+}
+
+.nav li a {
+    display: block;
+    color: white;
+    height: 50px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav li a:hover:not(.active) {
+    background-color: white;
+    color:black;
+}
+
+.nav .active {
+    background-color: #B50E0E;
 }
