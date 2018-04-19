@@ -13,14 +13,24 @@
         <main class="addNewClient">
             <div class="background">
                 <div id="screenCenter">
-                    <h1>Enter your username and password</h1>
+                    <h1>Enter your personnals informations</h1>
                     <form action="Login" method="post">
+                        <label><b>First Name</b></label>
+                        <input type="text" placeholder="First name..." name="fname" required>
+                        <br/>
+                        <label><b>Last Name</b></label>
+                        <input type="text" placeholder="Last name..." name="lname" required>
+                        <br/>
+                        <label><b>Email</b></label>
+                        <input type="text" placeholder="Email..." name="email" required>
+                        <br/>
+                        <label><b>Telephon number</b></label>
+                        <input type="text" placeholder="Telephon number..." name="phone" required>
+                        <br/>
                         <label><b>Username</b></label>
-                        <input type="text" placeholder="Enter Username" name="uname" required>
-
+                        <input type="text" placeholder="Username..." name="uname" required>
                         <label><b>Password</b></label>
-                        <input type="password" placeholder="Enter Password" name="psw" required>
-
+                        <input type="password" placeholder="Password..." name="psw" required>
                         <input type="hidden" name="loginRegister" value="register">
                         <button class="button" type="submit">Login</button>
                     </form>
