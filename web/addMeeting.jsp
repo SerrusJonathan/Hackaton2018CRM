@@ -15,7 +15,7 @@
                 <li class="nav"><a href="Dashboard.jsp">Home</a></li>
                 <li class="nav"><a href="addClient.html">Add a new client</a></li>
                 <li class="nav"><a class="active" href="addMeeting.jsp">Add a new meeting</a></li>
-                <li class="nav" style="float:right"><a href="#about">About</a></li>    
+                <li class="nav" style="float:right"><a href="about.html">About</a></li>    
                 <li class="nav" style="float:right"><a href="register.html">Register</a></li>
             </ul>
         </div>
