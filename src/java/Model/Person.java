@@ -23,6 +23,7 @@ public class Person {
     public String mail;
     public int number;
     public String comment;
+    public String password;
 
     public Person() {
     }
@@ -53,6 +54,9 @@ public class Person {
         return mail;
     }
 
+    public String getPassword() {
+        return password;
+    }
     public int getNumber() {
         return number;
     }
@@ -69,6 +73,8 @@ public class Person {
         this.mail = mail;
     }
     
-    
+    public void setPassword(String pass){
+        this.password = pass;
+    }
     
 }

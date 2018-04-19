@@ -17,6 +17,7 @@ import javax.persistence.*;
 public class Client extends Person{
     @OneToOne
     @JoinColumn (name = "key_id")
+    @Column(nullable = true)
     private Key key;
 
     public Client() {
