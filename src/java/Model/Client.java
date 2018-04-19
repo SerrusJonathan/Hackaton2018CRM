@@ -1,5 +1,7 @@
 package Model;
 
+import javax.persistence.*;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -11,8 +13,16 @@ package Model;
  *
  * @author Jonathan
  */
+@Entity
 public class Client extends Person{
+    @OneToOne
+    @JoinColumn (name = "key_id")
     private Key key;
+
+    public Client() {
+        super();
+    }
+    
     
     public Client(String firstName, String lastName) {
         super(firstName, lastName);

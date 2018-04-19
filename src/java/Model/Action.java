@@ -5,25 +5,41 @@
  */
 package Model;
 
+import javax.persistence.*;
+
 /**
  *
  * @author Jonathan
  */
+@Entity
 public class Action {
     
+    @Id
+    @GeneratedValue
+    private long id;
     private String text;
-    private Person assignee;
+    @OneToOne
+    @JoinColumn(name ="staff_id")
+    private Staff assignee;
     private String deadline;
     private String comment;
+    @Enumerated(EnumType.STRING)
     private ActionStatus actionstatus;
     
+    public Action(){
+        
+    }
 
-    public Action(String text, Person assignee, String deadline, String comment) {
+    public Action(String text, Staff assignee, String deadline, String comment) {
         this.text = text;
         this.assignee = assignee;
         this.deadline = deadline;
         this.comment = comment;
         this.actionstatus = ActionStatus.Open;
+    }
+
+    public long getId() {
+        return id;
     }
 
     public String getText() {

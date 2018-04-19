@@ -4,6 +4,7 @@ package Model;
 
 
 import java.util.List;
+import javax.persistence.*;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -15,16 +16,32 @@ import java.util.List;
  *
  * @author Jonathan
  */
+@Entity
 public class Meeting {
-    
+   @Id
+   @GeneratedValue
+    private long id;
     private String title;
     private String date;
     private String place;
+    @OneToOne
+    @JoinColumn(name="client_id")
     private Client client;
+    @OneToOne
+    @JoinColumn(name="staff_id")
     private Staff staff;
+    @OneToOne
+    @JoinColumn(name="topics_id")
     private Topics topics;
+    @OneToOne
+    @JoinColumn(name="action_id")
     private Action action;
 
+    public Meeting() {
+    }
+
+    
+    
     public Meeting(String title, String date, String place, Action action, Client client, Topics topics) {
         this.title = title;
         this.date = date;

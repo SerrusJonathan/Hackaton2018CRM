@@ -1,5 +1,7 @@
 package Model;
 
+import javax.persistence.*;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -11,11 +13,19 @@ package Model;
  *
  * @author Jonathan
  */
+@Entity
+@Table(name = "client_key")
 public class Key {
-    
+    @Id
+    @GeneratedValue
+    private long id;
     private String title;
     private String content;
 
+    public Key() {
+    }
+
+    
     public Key(String title, String content) {
         this.title = title;
     }

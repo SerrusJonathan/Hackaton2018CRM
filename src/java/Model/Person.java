@@ -1,5 +1,7 @@
 package Model;
 
+import javax.persistence.*;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -11,14 +13,22 @@ package Model;
  *
  * @author Jonathan
  */
+@MappedSuperclass
 public class Person {
-    
+    @Id
+    @GeneratedValue
+    protected long id;
     private String firstName;
     private String lastName;
     public String mail;
     public int number;
     public String comment;
 
+    public Person() {
+    }
+
+    
+    
     public Person(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;

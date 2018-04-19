@@ -1,5 +1,9 @@
 package Model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -11,8 +15,12 @@ package Model;
  *
  * @author Jonathan
  */
+@Entity
 public class Topics {
     
+    @Id
+    @GeneratedValue
+    private long id;
     private String title;
     private String content;
 
@@ -22,7 +30,7 @@ public class Topics {
     }
 
     public Topics() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 
     public String getTitle() {
