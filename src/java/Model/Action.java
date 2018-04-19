@@ -5,6 +5,7 @@
  */
 package Model;
 
+import java.util.List;
 import javax.persistence.*;
 
 /**
@@ -18,9 +19,11 @@ public class Action {
     @GeneratedValue
     private long id;
     private String text;
-    @OneToOne
-    @JoinColumn(name ="staff_id")
-    private Staff assignee;
+    @ManyToMany
+    @JoinTable(name = "action_assignee",
+            joinColumns = @JoinColumn(name = "action_id"),
+            inverseJoinColumn = @JoinColumn(name = "PAUL"))
+    private List<Staff> assignee;
     private String deadline;
     private String comment;
     @Enumerated(EnumType.STRING)
@@ -30,7 +33,7 @@ public class Action {
         
     }
 
-    public Action(String text, Staff assignee, String deadline, String comment) {
+    public Action(String text, List<Staff> assignee, String deadline, String comment) {
         this.text = text;
         this.assignee = assignee;
         this.deadline = deadline;
@@ -46,7 +49,7 @@ public class Action {
         return text;
     }
 
-    public Person getAssignee() {
+    public List<Staff> getAssignee() {
         return assignee;
     }
 

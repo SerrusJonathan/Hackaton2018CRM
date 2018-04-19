@@ -27,28 +27,35 @@ public class Meeting {
     @OneToOne
     @JoinColumn(name="client_id")
     private Client client;
-    @OneToOne
-    @JoinColumn(name="staff_id")
-    private Staff staff;
-    @OneToOne
-    @JoinColumn(name="topics_id")
-    private Topics topics;
-    @OneToOne
-    @JoinColumn(name="action_id")
-    private Action action;
+    @ManyToMany
+    @JoinTable(name = "meeting_staff",
+            joinColumns = @JoinColumn(name = "meeting_id"),
+            inverseJoinColumn = @JoinColumn(name = "staff_id"))
+    private List<Staff> staff;
+    @ManyToMany
+    @JoinTable(name = "meeting_topics",
+            joinColumns = @JoinColumn(name = "meeting_id"),
+            inverseJoinColumn = @JoinColumn(name = "topic_id"))
+    private List<Topics> topics;
+    @OneToMany
+    @JoinTable(name = "meeting_actions",
+            joinColumns = @JoinColumn(name = "meeting_id"),
+            inverseJoinColumn = @JoinColumn(name = "action_id"))
+    private List<Action> action;
 
     public Meeting() {
     }
 
     
     
-    public Meeting(String title, String date, String place, Action action, Client client, Topics topics) {
+    public Meeting(String title, String date, String place, List<Action> action, Client client, List<Topics> topics, List<Staff> staff) {
         this.title = title;
         this.date = date;
         this.place = place;
         this.action = action;
         this.client = client;
         this.topics = topics;
+        this.staff = staff;
     }
 
     public String getTitle() {
@@ -67,23 +74,23 @@ public class Meeting {
         return client;
     }
 
-    public Staff getStaff() {
+    public List<Staff> getStaff() {
         return staff;
     }
 
-    public Topics getTopics() {
+    public List<Topics> getTopics() {
         return topics;
     }
 
-    public Action getAction() {
+    public List<Action> getAction() {
         return action;
     }
 
-    public void setStaff(Staff staff) {
+    public void setStaff(List<Staff> staff) {
         this.staff = staff;
     }
 
-    public void setTopics(Topics topic) {
+    public void setTopics(List<Topics> topic) {
         this.topics = topics;
     }
     
